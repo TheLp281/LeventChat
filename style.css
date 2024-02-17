@@ -361,7 +361,7 @@ th {
     
 }
 
-.servers-list li img[src='/static/images/icons/faviconactive.png'] {
+.servers-list li img[src='static/images/icons/faviconactive.png'] {
     width: 35px;
     height: 35px;
     border: 10px solid #2c2c2c;
@@ -369,18 +369,18 @@ th {
     margin-top: -55px;
     
 }
-.servers-list li img:not([src='/static/images/icons/faviconactive.png']) {
+.servers-list li img:not([src='static/images/icons/faviconactive.png']) {
     top: 35px;
     position: relative;
     
 }
 
 
-.servers-list li img[src='/static/images/icons/faviconactive.png']:hover {
+.servers-list li img[src='static/images/icons/faviconactive.png']:hover {
     border: 10px solid #677bc4;
 }
 
-.servers-list li img:not([src='/static/images/icons/faviconactive.png']):hover {
+.servers-list li img:not([src='static/images/icons/faviconactive.png']):hover {
     border-radius: 0px; 
 }
 
