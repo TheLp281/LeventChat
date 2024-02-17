@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" id="favicon" type="image/png" href="/static/images/icons/faviconunactive.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Levent Chat</title>
+    <audio id="notificationSound" src="static/notification.mp3"></audio>
+    <link rel="stylesheet" href="/style.css"> 
+    
+</head>
+<body>
+    <script src="/script.js"></script> 
+
+    <ul class="servers-list">
+        <li><img src="/static/images/icons/faviconactive.png"alt="Main Logo" </li>
+        <li><img src="/static/images/blank.png" alt="0"></li>
+        <li><img src="/static/images/server1.webp" alt="Server 1"></li>
+        <li><img src="/static/images/server2.webp" alt="Server 2"></li>
+        <li><img src="/static/images/server3.webp" alt="Server 3"></li>
+    </ul>
+
+    <div id="user-container"></div>
+    <div id="channel-list">
+        <div id="user-info-panel">
+            <span id="self-name" style="position: absolute; left: 50px; top: 4px; font-size: 16px; color:#ffffff">Reeyuki</span>
+            <span id="self-status" style="position: absolute; left: 50px; top: 25px; font-size: 11px; color:#adadad">Çevrim içi</span>
+            <img id="self-profile-image" src="/static/profiles/guest.jpg" width="40" height="40" style="border-radius: 50%; position: absolute; top: 5px; left: 5px;">
+
+            
+            <span id="self-bubble" style="background-color: #23a55a;  border-radius: 20px; position: absolute; 
+            margin-left:30px ;width: 10px;height: 10px; bottom: 4px; ; border: 2.5px solid #2f3136; z-index:1">
+                <span></span>
+            </span>
+            <button id="settings-button" onclick="openSettings()">⚙️</button>
+            <button id="earphone-button" onclick="setEarphones()">🎧</button>
+            <img id="microphone-button" src="/static/images/icons/whitemic.png" width="25" height="25" style="position: absolute; top: 10px; right: 80px;" onclick="setMicrophone()">
+
+        </div>
+        <ul>
+        </ul>
+    </div>
+
+    <div id="chat-container"></div>
+
+    <div id="message-input-container">
+        <div id="reply-container">
+            <div id="reply-info">
+                <span style="color: white; font-size : 21px;""> User</span>
+                <span style="color: gray;"> kişisine yanıt veriliyor</span>
+            </div>
+            <button id="reply-close-button" onclick="closeReplyMenu()">X</button>
+            
+        </div>
+        <div id="message-input">
+            <input type="text" id="user-input" placeholder="#genel kanalına Mesaj gönder">
+        </div>
+    </div>
+
+    <div id="channel-info-container">
+        <div id="server-container">
+            <div id="server-name">LeventChat</div>
+        </div>
+        <div id="channel-info"></div>
+        
+        <div id="hash-sign">#</div>
+        
+    </div>
+    
+    <div id="settings-overlay">
+        <div id="settings-menu">
+            
+            <label for="new-nickname">Nick değiştir:</label>
+            <input type="text" id="new-nickname" placeholder="Kullanıcı adı gir">
+            <button type="change-nick-button" onclick="changeNickname()">Değiştir</button>
+            <button type="close-settings-button" onclick="closeSettings()">Kapat</button>
+            
+        </div>
+    </div>
+
+    <div id="user-list">
+        <ul>
+        <ul>
+    </div>
+
+
+</body>
+</html>

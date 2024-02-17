@@ -1,0 +1,386 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: row; 
+    background-color: #0048ff;
+    overflow-y: hidden;
+    overflow-x:hidden;
+    min-height: 100vh; 
+
+
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+}
+th, td {
+    border: 1px solid #36393f; /* Discord Dark Theme border color */
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #40444b; /* Discord Dark Theme background color */
+    color: #b9bbbe; /* Discord Dark Theme text color */
+}
+/* Discord Dark Theme bg : #2b2d31*/
+
+#channel-list,
+#user-list {
+    z-index: 1;
+    padding: 36px 36px;
+    background-color: #2b2d31;
+    color: #ffffff;
+    font-weight: bold;
+    scroll-behavior: smooth;
+}
+#channel-list {
+    z-index: 1;
+    padding-left: 125px;
+    width: 145px;
+    padding-top: 25px;
+    background-color: #2b2d31;
+    color: #ffffff;
+    font-weight: bold;
+}
+#user-list {
+    padding-top: 3%;
+}
+
+
+#user-info-panel {
+    position: fixed;
+    bottom: 0;
+    left: 60px;
+    width: 245px;
+    height: 50px;
+
+    background-color: #232428; 
+}
+/* Settings button to open settings */
+#settings-button {
+    height: 35px;
+    width: 35px;
+    position: relative;
+    left: 205px;
+    font-size: 22px;
+    top: 5px;
+    background-color: #232428; 
+    border: none;
+    padding-left: 3.5px;
+    padding-bottom: 3.5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#settings-button:hover {
+    background-color: #535353;
+}
+#microphone-button {
+    border-radius: 100%;
+
+    background-color: #ffffff00;
+}
+#microphone-button:hover {
+    background-color: #535353;
+}
+
+#earphone-button {
+    height: 35px;
+    width: 35px;
+    position: relative;
+    left: 130px;
+    font-size: 22px;
+    top: 5px;
+    background-color: #232428; 
+    padding-left: 2.5px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#earphone-button:hover {
+    background-color: #535353;
+}
+
+
+#chat-container {
+    flex: 1;
+    height: calc(100vh - 10vh); 
+    overflow-y: auto;
+    padding-left: 5px;
+    padding-top: 110px;
+    border-bottom: 1px solid #2d3035;
+    background-color: #313338;
+    color: #dcddde;
+    scroll-behavior: smooth;
+}
+
+
+#chat-container::-webkit-scrollbar {
+    width: 12px; 
+}
+
+
+#chat-container::-webkit-scrollbar-thumb{
+    background-color: #555555; 
+    border-radius: 6px;
+}
+
+
+#chat-container::-webkit-scrollbar-track{
+    background-color: #2f3136; 
+}
+
+
+
+
+#channel-list::-webkit-scrollbar {
+    width: 12px; 
+}
+
+
+#channel-list::-webkit-scrollbar-thumb{
+    background-color: #555555; 
+    border-radius: 6px;
+}
+
+
+#channel-list::-webkit-scrollbar-track{
+    background-color: #2f3136; 
+}
+
+
+#message-input-container {
+    background-color: #313338;
+    position: fixed;
+    bottom: 2.6%;
+    padding-left:  320px;
+    width: 100%;
+    height: 3.5%;
+    
+}
+#user-input {
+    position: fixed;
+    color: #ffffff;
+    background-color: #36393f;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 72.5%;
+    height: 4%;
+
+    outline: none;
+}
+
+.channel-button {
+    width: 50px;
+    height: 30px; 
+    margin-left: -50px; 
+    border: none;
+
+}
+
+#channel-info-container {
+    background-color: #313338;
+    color: #ffffff;
+    position: fixed;
+    padding: 5px;
+    padding-left: 405px;
+    width: 60%;
+}
+
+#channel-info {
+    border: 1px solid #36393f;
+    border-radius: 4px;
+    font-size: 20px;
+
+    left: 350px;
+    top: 5px;
+}
+#hash-sign {
+    font-size: 32px;
+    top:0px;
+    left: 325px;
+    color: #686868;
+    position: absolute;
+}
+
+#reply-close-button {
+    position: absolute;
+    top: -25px;
+    right: 35%;
+
+    font-size: 20px;
+    border-radius: 50%;
+    border: none;
+}
+#reply-container {
+
+    background-color: #2b2d31;
+    color: #dddada;
+    width: 80%; 
+    border-radius: 5%;
+    height: 4%;
+    bottom: 6%;
+    padding-left: 20px;
+    position: fixed;
+}
+
+#reply-info {
+    font-size: 16px;
+}
+
+
+
+
+
+/* Main settings background */
+#settings-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+#self-profile-image {
+    transition: border-radius 0.5s ease-out;
+}
+
+#settings-menu {
+    background-color: #2f3136;
+    padding: 20px;
+    border-radius: 0px;
+    color: #b9bbbe;
+    position: auto;
+    top: 100%;
+    z-index: 10;
+    left: 100%; 
+    width: 900px;
+    height: 450px;
+}
+
+#settings-menu button {
+
+    top: 10px; 
+    right: 10px; 
+    background-color: #7289da; 
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 40px;
+
+}
+#settings-menu button:hover {
+    background-color: #677bc4;
+}
+#server-container {
+    background-color: #2f3136; 
+    position: fixed;
+    display: inline;
+
+
+    border: 1px solid #272727;
+    width:240px;
+    height: 36px;
+    margin-left: -340px;
+
+
+
+}
+#server-name {
+    padding-left: 15px;
+    color: #ffffff;
+    position: relative;
+    font-size: 20px;
+
+}
+
+
+.channel-button {
+    padding-top: 5px;
+    font-size: 15px;
+    color: #bebebe;
+    display: flex;
+    background-color: #2f3136;
+}
+
+.channel-button:hover {
+    background-color: #394857;
+}
+.user-table-wrapper {
+    max-height: 90%; 
+    overflow-y: auto; 
+    overflow-x: hidden; 
+}
+.user-table-wrapper::-webkit-scrollbar {
+    width: 4px; 
+}
+.user-table-wrapper::-webkit-scrollbar-thumb{
+    background-color: #1d1d1d; 
+    border-radius: 6px;
+}
+.user-table-wrapper::-webkit-scrollbar-track{
+    background-color: #2f3136; 
+}
+
+.user-table {
+    border-collapse: collapse; 
+}
+
+.user-table tr:hover {
+    background-color: #36373d; 
+}
+
+.user-table td {
+    padding-top: 5%;
+}
+
+.servers-list {
+    padding-left: 10px;
+    padding-top: 50px;
+    background-color: #232428;
+    position: absolute;
+    height: 100%;
+    width: 50px;    
+    z-index: 2;
+}
+
+.servers-list li img {
+    transition: border-radius 0.5s ease, border 0.5s ease; 
+    border-radius: 50%; 
+    width: 50px;
+
+    height: 50px;
+    margin-left: -7px;
+    top: 65px;
+    
+}
+
+.servers-list li img[src='/static/images/icons/faviconactive.png'] {
+    width: 35px;
+    height: 35px;
+    border: 10px solid #2c2c2c;
+    position: fixed;
+    margin-top: -55px;
+    
+}
+.servers-list li img:not([src='/static/images/icons/faviconactive.png']) {
+    top: 35px;
+    position: relative;
+    
+}
+
+
+.servers-list li img[src='/static/images/icons/faviconactive.png']:hover {
+    border: 10px solid #677bc4;
+}
+
+.servers-list li img:not([src='/static/images/icons/faviconactive.png']):hover {
+    border-radius: 0px; 
+}
+
