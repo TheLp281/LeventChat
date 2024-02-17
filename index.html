@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" id="favicon" type="image/png" href="/static/images/icons/faviconunactive.png">
+    <link rel="icon" id="favicon" type="image/png" href="static/images/icons/faviconunactive.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Levent Chat</title>
@@ -375,7 +375,7 @@ th {
     
 }
 
-.servers-list li img[src='/static/images/icons/faviconactive.png'] {
+.servers-list li img[src='static/images/icons/faviconactive.png'] {
     width: 35px;
     height: 35px;
     border: 10px solid #2c2c2c;
@@ -383,18 +383,18 @@ th {
     margin-top: -55px;
     
 }
-.servers-list li img:not([src='/static/images/icons/faviconactive.png']) {
+.servers-list li img:not([src='static/images/icons/faviconactive.png']) {
     top: 35px;
     position: relative;
     
 }
 
 
-.servers-list li img[src='/static/images/icons/faviconactive.png']:hover {
+.servers-list li img[src='static/images/icons/faviconactive.png']:hover {
     border: 10px solid #677bc4;
 }
 
-.servers-list li img:not([src='/static/images/icons/faviconactive.png']):hover {
+.servers-list li img:not([src='static/images/icons/faviconactive.png']):hover {
     border-radius: 0px; 
 }
 
@@ -403,8 +403,8 @@ th {
 
 
     <ul class="servers-list">
-        <li><img src="/static/images/icons/faviconactive.png"alt="Main Logo" </li>
-        <li><img src="/static/images/blank.png" alt="0"></li>
+        <li><img src="static/images/icons/faviconactive.png"alt="Main Logo" </li>
+        <li><img src="static/images/blank.png" alt="0"></li>
         <li><img src="static/images/server1.webp" alt="Server 1"></li>
         <li><img src="static/images/server2.webp" alt="Server 2"></li>
         <li><img src="static/images/server3.webp" alt="Server 3"></li>
@@ -415,7 +415,7 @@ th {
         <div id="user-info-panel">
             <span id="self-name" style="position: absolute; left: 50px; top: 4px; font-size: 16px; color:#ffffff">Reeyuki</span>
             <span id="self-status" style="position: absolute; left: 50px; top: 25px; font-size: 11px; color:#adadad">Çevrim içi</span>
-            <img id="self-profile-image" src="/static/profiles/guest.jpg" width="40" height="40" style="border-radius: 50%; position: absolute; top: 5px; left: 5px;">
+            <img id="self-profile-image" src="static/profiles/guest.jpg" width="40" height="40" style="border-radius: 50%; position: absolute; top: 5px; left: 5px;">
 
             
             <span id="self-bubble" style="background-color: #23a55a;  border-radius: 20px; position: absolute; 
@@ -424,7 +424,7 @@ th {
             </span>
             <button id="settings-button" onclick="openSettings()">⚙️</button>
             <button id="earphone-button" onclick="setEarphones()">🎧</button>
-            <img id="microphone-button" src="/static/images/icons/whitemic.png" width="25" height="25" style="position: absolute; top: 10px; right: 80px;" onclick="setMicrophone()">
+            <img id="microphone-button" src="static/images/icons/whitemic.png" width="25" height="25" style="position: absolute; top: 10px; right: 80px;" onclick="setMicrophone()">
 
         </div>
         <ul>
@@ -539,7 +539,7 @@ function updateChannels(channels) {
 
 let isMicrophoneMuted = false;
 function setMicrophone() {
-    let imagePath = isMicrophoneMuted ? "/static/images/icons/redmic.png" : "/static/images/icons/whitemic.png";
+    let imagePath = isMicrophoneMuted ? "static/images/icons/redmic.png" : "static/images/icons/whitemic.png";
     microphoneButton.src = imagePath;
     isMicrophoneMuted = !isMicrophoneMuted;
 }
@@ -547,7 +547,7 @@ function setMicrophone() {
 let isEarphonesMuted = false;
 function setEarphones() {
     console.log("Earphones are not implemented");
-    //let imagePath = isMicrophoneMuted ? "/static/images/icons/redearphones.png" : "/static/images/icons/whiteearphones.png";
+    //let imagePath = isMicrophoneMuted ? "static/images/icons/redearphones.png" : "static/images/icons/whiteearphones.png";
     //microphoneButton.src = imagePath;
     isEarphonesMuted = !isEarphonesMuted;
 }
@@ -609,10 +609,10 @@ document.addEventListener('visibilitychange', function() {
     var favicon = document.getElementById('favicon');
     if (!document.hidden && isAnyChannelUnreaded()) {
         // User returned to the page and there are unread messages
-        favicon.href = '/static/images/icons/faviconactive.png';
+        favicon.href = 'static/images/icons/faviconactive.png';
     } else {
         // User switched tabs or left the page or there are no unread messages
-        favicon.href = '/static/images/icons/faviconunactive.png';
+        favicon.href = 'static/images/icons/faviconunactive.png';
     }
 });
 
@@ -809,12 +809,12 @@ function updateUserList(users) {
 }
 
 const customEmojis = {
-    ":yes:": "/static/images/yes.png",
-    ":no:": "/static/images/no.png",
-    ":slap:": "/static/images/slap.png",
-    ":unrelated:": "/static/images/unrelated.png",
-    ":ekmek:": "/static/images/ekmek.png",
-    ":trash:": "/static/images/trash.png"
+    ":yes:": "static/images/yes.png",
+    ":no:": "static/images/no.png",
+    ":slap:": "static/images/slap.png",
+    ":unrelated:": "static/images/unrelated.png",
+    ":ekmek:": "static/images/ekmek.png",
+    ":trash:": "static/images/trash.png"
 };
 
 
