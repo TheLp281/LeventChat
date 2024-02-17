@@ -59,7 +59,7 @@ function updateChannels(channels) {
 
 let isMicrophoneMuted = false;
 function setMicrophone() {
-    let imagePath = isMicrophoneMuted ? "/static/images/icons/redmic.png" : "/static/images/icons/whitemic.png";
+    let imagePath = isMicrophoneMuted ? "static/images/icons/redmic.png" : "static/images/icons/whitemic.png";
     microphoneButton.src = imagePath;
     isMicrophoneMuted = !isMicrophoneMuted;
 }
@@ -67,7 +67,7 @@ function setMicrophone() {
 let isEarphonesMuted = false;
 function setEarphones() {
     console.log("Earphones are not implemented");
-    //let imagePath = isMicrophoneMuted ? "/static/images/icons/redearphones.png" : "/static/images/icons/whiteearphones.png";
+    //let imagePath = isMicrophoneMuted ? "static/images/icons/redearphones.png" : "static/images/icons/whiteearphones.png";
     //microphoneButton.src = imagePath;
     isEarphonesMuted = !isEarphonesMuted;
 }
@@ -129,10 +129,10 @@ document.addEventListener('visibilitychange', function() {
     var favicon = document.getElementById('favicon');
     if (!document.hidden && isAnyChannelUnreaded()) {
         // User returned to the page and there are unread messages
-        favicon.href = '/static/images/icons/faviconactive.png';
+        favicon.href = 'static/images/icons/faviconactive.png';
     } else {
         // User switched tabs or left the page or there are no unread messages
-        favicon.href = '/static/images/icons/faviconunactive.png';
+        favicon.href = 'static/images/icons/faviconunactive.png';
     }
 });
 
@@ -329,12 +329,12 @@ function updateUserList(users) {
 }
 
 const customEmojis = {
-    ":yes:": "/static/images/yes.png",
-    ":no:": "/static/images/no.png",
-    ":slap:": "/static/images/slap.png",
-    ":unrelated:": "/static/images/unrelated.png",
-    ":ekmek:": "/static/images/ekmek.png",
-    ":trash:": "/static/images/trash.png"
+    ":yes:": "static/images/yes.png",
+    ":no:": "static/images/no.png",
+    ":slap:": "static/images/slap.png",
+    ":unrelated:": "static/images/unrelated.png",
+    ":ekmek:": "static/images/ekmek.png",
+    ":trash:": "static/images/trash.png"
 };
 
 
